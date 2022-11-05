@@ -7,8 +7,8 @@ import Filter from '../components/Filter/Filter';
 const Events = () => {
   return (
     <div className='wrapper py-6'>
-      <div className='filterContainer flex justify-between px-12'>
-      <div className='sInput'>
+      <div className='filterContainer flex px-4 justify-between sm:px-12'>
+      <div className='sInput '>
       <SearchBar />
       </div>
       <div className='fInput'>
