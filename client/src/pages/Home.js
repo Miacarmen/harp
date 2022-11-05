@@ -1,7 +1,7 @@
 import React from 'react';
 // Components
 import Hero from '../components/Hero/Hero';
-// import ImgCarousel from '../components/Carousel/ImgCarousel';
+import ImgCarousel from '../components/Carousel/ImgCarousel';
 
 import pinkRoses from '../images/trans-pink.png';
 
@@ -52,7 +52,7 @@ const HomePage = () => {
           </div>
         </div>
 
-        {/* <ImgCarousel /> */}
+        <ImgCarousel />
       </div>
     </div>
   );
