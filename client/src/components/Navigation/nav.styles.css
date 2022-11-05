@@ -1,0 +1,13 @@
+.nav {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+}
+
+.navbar {
+    position: fixed;
+}
+
+.navLink.active {
+    color: #D926A9 !important;
+}
