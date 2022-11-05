@@ -31,3 +31,9 @@ body,
   .login-container {
     border: 2px solid white;
   }
+
+  /* @media only screen and (max-width: 767px) {
+    .eventGrid {
+        grid-template-columns: 3;
+    }
+}  */

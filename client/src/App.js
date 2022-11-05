@@ -21,10 +21,10 @@ function App() {
       <div className='wrapper'>
         <Routes>
           <Route path='/' element={<Home />} />
-          {/* <Route path='/events' element={<Events />} />
+          <Route path='/events' element={<Events />} />
           <Route path='/dashboard' element={<UserDash />} />
           <Route path='/contact' element={<Contact />} />
-          <Route path='/login' element={<Login />} /> */}
+          <Route path='/login' element={<Login />} />
           {/* <Route path='/signup' element={<Signup />} />  */}
           <Route path='*' element={<p>Page Not Found</p>} />
         </Routes>
