@@ -8,8 +8,11 @@ const Filter = () => {
           <option disabled selected>
             Pick category
           </option>
-          <option>T-shirts</option>
-          <option>Mugs</option>
+          <option>Location</option>
+          <option>Date</option>
+          <option>Time</option>
+          <option>Day of Week</option>
+          <option>Recently Added</option>
         </select>
         <button className='btn'>Go</button>
       </div>
