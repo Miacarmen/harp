@@ -1,6 +1,6 @@
 import React from 'react';
 // Components
-import EventCard from '../components/EventCard/EventCard';
+import EventCard from '../components/Cards/EventCard/EventCard';
 import SearchBar from '../components/SearchBar/SearchBar';
 import Filter from '../components/Filter/Filter';
 

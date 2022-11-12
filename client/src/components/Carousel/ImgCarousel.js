@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Carousel } from 'react-responsive-carousel';
 // import axios from 'axios';
 // Components
-import HomeEventCard from '../EventCard/HomeEventCard';
+import HomeEventCard from '../Cards/EventCard/EventCard';
 
 // * TO-DO: update cards with the most recently posted events
 const ImgCarousel = () => {

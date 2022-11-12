@@ -1,7 +1,7 @@
 import React from 'react';
 import { BiUserCircle } from 'react-icons/bi';
 
-import EventCard from '../components/EventCard/EventCard';
+import EventCard from '../components/Cards/EventCard/EventCard';
 // import DashCarousel from '../components/Carousel/DashCarousel';
 
 const UserDash = () => {
