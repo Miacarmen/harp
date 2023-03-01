@@ -18,6 +18,13 @@ const ImgCarousel = () => {
     });
   }, []);
 
+  // sort events by createdAt date
+  const sortedEvents = eventData.sort((a, b) => {
+    return new Date(b.createdAt) - new Date(a.createdAt);
+  });
+  // only display the first 6 events  
+  sortedEvents.length = 6;
+
   return (
     <>
       <div className='hero'>
@@ -28,8 +35,8 @@ const ImgCarousel = () => {
             </h1>
 
             <div className='carousel carousel-center p-4 pb-8 space-x-4 rounded-box'>
-            
-              {eventData.map((event) => (
+          
+              {sortedEvents.map((event) => (
                   <div className='carousel-item'>
                     <HomeEventCard
                       key={event._id}
