@@ -64,10 +64,14 @@ const eventSchema = new Schema(
     bookings: {
       type: Number,
     },
-    image: {
+    imageURL: {
       type: String,
       required: true,
     },
+    tags: {
+      type: Array,
+      required: true,
+    }
   },
   {
     timestamps: {

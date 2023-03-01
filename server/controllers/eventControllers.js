@@ -39,7 +39,7 @@ module.exports = {
       price,
       openings,
       bookings,
-      image,
+      imageURL,
     } = req.body;
 
     let existingEvent;
@@ -94,17 +94,18 @@ module.exports = {
   updateEvent: async (req, res) => {
     let event;
     try {
-      event = await Event.findById({ _id: req.params.eventId });
+      event = await Event.findOneAndUpdate({ _id: req.params.eventId });
       if(!event) {
         res.sendStatus(404);
         return;
       }
-      event.image = req.body.image;
+      event.imageURL = req.body.imageURL;
       await event.save();
       res.sendStatus(200);
     } catch (err) {
       res.status(500).json(err);
     }
   },
+  
   
 };
