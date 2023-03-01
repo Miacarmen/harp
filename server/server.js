@@ -4,8 +4,8 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 require("dotenv").config();
 
-// const userRoutes = require('./routes/api/userRoutes');
-// const eventRoutes = require('./routes/api/eventRoutes');
+const userRoutes = require('./routes/api/userRoutes');
+const eventRoutes = require('./routes/api/eventRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -22,9 +22,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors(corsOptions));
 
-// User Routes
-// app.use('/api/users', userRoutes);
-// app.use('/api/events', eventRoutes);
+// Routes
+app.use('/api/users', userRoutes);
+app.use('/api/events', eventRoutes);
 
 // MongoDB Atlas connection string
 const connectionString =
