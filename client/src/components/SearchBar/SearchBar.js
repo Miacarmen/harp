@@ -1,9 +1,16 @@
 import React from 'react';
 
 const SearchBar = () => {
+  // when button is clicked, search for the input value in the db
+  const handleSearch = (e) => {
+    e.preventDefault();
+    console.log('searching...');
+  };
+
   return (
     <div className='form-control'>
-      <div className='input-group'>
+      <div className='input-group' action="/search/" autoComplete='off' method="get" role="search">
+        {/* <form className='flex' action="/search/" autoComplete='off' method="get" role="search"> */}
         <input
           type='text'
           placeholder='Search…'
@@ -25,6 +32,7 @@ const SearchBar = () => {
             />
           </svg>
         </button>
+        {/* </form> */}
       </div>
     </div>
   );

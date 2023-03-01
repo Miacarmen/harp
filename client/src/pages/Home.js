@@ -1,4 +1,5 @@
 import React from 'react';
+
 // Components
 import Hero from '../components/Hero/Hero';
 import ImgCarousel from '../components/Carousel/ImgCarousel';
