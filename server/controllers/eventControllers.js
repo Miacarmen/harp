@@ -91,20 +91,33 @@ module.exports = {
   },
 
   // UPDATE event by eventId
-  updateEvent: async (req, res) => {
-    let event;
-    try {
-      event = await Event.findOneAndUpdate({ _id: req.params.eventId });
-      if(!event) {
-        res.sendStatus(404);
-        return;
-      }
-      event.imageURL = req.body.imageURL;
-      await event.save();
-      res.sendStatus(200);
-    } catch (err) {
-      res.status(500).json(err);
-    }
+  // updateEvent: async (req, res) => {
+  //   let event;
+  //   try {
+  //     event = await Event.findOneAndUpdate({ _id: req.params.eventId });
+  //     if(!event) {
+  //       res.sendStatus(404);
+  //       return;
+  //     }
+  //     event.imageURL = req.body.imageURL;
+  //     await event.save();
+  //     res.sendStatus(200);
+  //   } catch (err) {
+  //     res.status(500).json(err);
+  //   }
+  // },
+  updateEvent(req, res) {
+    Event.findOneAndUpdate(
+      { _id: req.params.eventId },
+      { $set: req.body },
+      { runValidators: true, New: true }
+    )
+      .then((event) =>
+        !event
+          ? res.status(404).json({ message: "No event find with this ID!" })
+          : res.json(event)
+      )
+      .catch((err) => res.status(500).json(err));
   },
   
   

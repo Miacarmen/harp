@@ -37,22 +37,6 @@ const eventSchema = new Schema(
       type: Number,
       required: true,
     },
-    // // long and lat
-    // location: {
-    //   type: {
-    //     type: String,
-    //     enum: ['Point'], // location.type must be Point
-    //     required: true
-    //   },
-    //   coordinates: {
-    //     type: [Number],
-    //     required: true,
-    //   }
-    // },
-    // address: {
-    //   type: String,
-    //   required: true,
-    // },
     openings: {
       type: Number,
     },
@@ -86,8 +70,6 @@ const eventSchema = new Schema(
   }
 );
 
-// eventSchema.index({ eventName: 'text', summary: 'text' });
-// eventSchema.index({ loc: '2dsphere' });
 
 const Event = model('Event', eventSchema);
 
