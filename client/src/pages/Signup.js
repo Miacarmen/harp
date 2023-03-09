@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 
 import SignupCard from '../components/Signup/SignupCard';
 
@@ -6,10 +6,10 @@ const Signup = () => {
   return (
     <div className='flex h-screen'>
       <div className='m-auto pb-24'>
-      <SignupCard />
+        <SignupCard />
+      </div>
     </div>
-    </div>
-  )
-}
+  );
+};
 
-export default Signup
+export default Signup;

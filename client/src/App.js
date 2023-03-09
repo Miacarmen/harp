@@ -28,7 +28,7 @@ function App() {
           <Route path='/contact' element={<Contact />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<Signup />} /> 
-          <Route path='/viewEvent' element={<ViewEvent />} />
+          <Route path='/events/:id' element={<ViewEvent />} />
           <Route path='*' element={<p>Page Not Found</p>} />
         </Routes>
       </div>

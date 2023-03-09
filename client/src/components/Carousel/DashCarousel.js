@@ -23,16 +23,7 @@ const DashCarousel = () => {
           <div className='hero-content text-center mb-16 mt-8'>
             <div className='max-w-md lg:max-w-full'>
               <div className='carousel carousel-center max-w-full p-4 pb-8 space-x-4 rounded-box'>
-                {/* {eventData.map((event) => (
-                  <div className='carousel-item'>
-                    <HomeEventCard
-                      key={event._id}
-                      title={event.title}
-                      summary={event.summary}
-                      image={event.imageURL}
-                    />
-                  </div>
-                ))} */}
+               
                 <div className='carousel-item'>
                   <HomeEventCard />
                 </div>

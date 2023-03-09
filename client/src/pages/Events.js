@@ -16,6 +16,9 @@ const Events = () => {
       console.log(res.data);
     });
   }, []);
+
+  console.log(eventData);
+
   return (
     <div className='wrapper py-6'>
       <div className='filterContainer flex px-4 justify-between sm:px-12'>
@@ -28,14 +31,7 @@ const Events = () => {
       </div>
       <div className='flex justify-center pt-8 pb-6'>
         <div className='eventGrid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'>
-          {/* <EventCard />
-          <EventCard />
-          <EventCard />
-          <EventCard />
-          <EventCard />
-          <EventCard />
-          <EventCard />
-          <EventCard /> */}
+          
           {eventData.map((event) => (
             <EventCard
               key={event._id}

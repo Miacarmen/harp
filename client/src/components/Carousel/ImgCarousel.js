@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import { Carousel } from 'react-responsive-carousel';
 
 // Components
 import HomeEventCard from '../Cards/EventCard/EventCard';
 
-// * TO-DO: update cards with the most recently posted events
 const ImgCarousel = () => {
   const [eventData, setEventData] = useState([]);
 
@@ -46,21 +44,6 @@ const ImgCarousel = () => {
                     />
                   </div>
                 ))}
-              {/* <div className='carousel-item'>
-                <HomeEventCard />
-              </div>
-              <div className='carousel-item'>
-                <HomeEventCard />
-              </div>
-              <div className='carousel-item'>
-                <HomeEventCard />
-              </div>
-              <div className='carousel-item'>
-                <HomeEventCard />
-              </div>
-              <div className='carousel-item'>
-                <HomeEventCard />
-              </div> */}
             </div>
 
             <Link to='/events'>

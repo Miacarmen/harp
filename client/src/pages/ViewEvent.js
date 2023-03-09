@@ -1,11 +1,50 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 
-import EventDetailCard from '../components/Cards/EventCard/EventDetailCard';
+// import EventDetailCard from '../components/Cards/EventCard/EventDetailCard';
 
 const ViewEvent = () => {
+  const [eventData, setEventData] = useState({});
+  const { id } = useParams();
+
+  useEffect(() => {
+    const baseURL = `http://localhost:4000/api/events/${id}`;
+    axios.get(baseURL).then((res) => {
+      setEventData(res.data);
+      console.log(res.data);
+    });
+  }, [id]);
+
   return (
     <div className='flex place-content-center m-auto mt-5'>
-      <EventDetailCard />
+      {/* <EventDetailCard /> */}
+
+      <div className='card lg:w-9/12 bg-base-200 shadow-xl lg:mb-9 mt-3 '>
+        <figure className='px-10 pt-10'>
+          <img
+            src={eventData.imageURL}
+            alt={eventData.title}
+            className='rounded-xl'
+          />
+        </figure>
+        <div className='card-body items-center text-center'>
+          <h2 className='card-title text-xl'>{eventData.title}</h2>
+          {/* <p className='pt-3'>{eventData.description}</p>
+          <p className='pt-3'>Duration: {eventData.duration}</p>
+          <p className='pt-3'>Days: {eventData.days}</p>
+          <p className='pt-3'>Hours: {eventData.hours}</p>
+          <p className='pt-3'>$ {eventData.price}</p>
+          <p className='pt-3'>Tickets Left:{eventData.openings}</p> */}
+
+          <div className='card-actions pt-5'>
+            <button className='btn btn rounded-full border-none bg-primary hover:bg-primary-focus text-base-100'>
+              RSVP NOW
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
